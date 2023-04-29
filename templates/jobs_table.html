@@ -27,6 +27,17 @@
                     <td class="table-danger">if not finished</td>
                 {% endif %}
             </tr>
+            {% if current_user.is_authenticated and (current_user.id == job.team_leader or
+            current_user.id == 1) %}
+                <div>
+                    <a href="/jobs/{{ job.id }}" class="btn btn-warning">
+                        Изменить
+                    </a>
+                    <a href="/jobs_delete/{{ job.id }}" class="btn btn-danger">
+                        Удалить
+                    </a>
+                </div>
+            {% endif %}
         </tbody>
     </table>
 </div>

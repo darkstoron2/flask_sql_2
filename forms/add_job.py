@@ -8,6 +8,6 @@ class AddJobForm(FlaskForm):
     work_size = IntegerField('Продолжительность')
     collaborators = StringField('Участники')
     start_date = DateField('Начало работы')
-    end_date = DateField('Начало работы')
+    end_date = DateField('Конец работы')
     is_finished = BooleanField("Работа завершена")
     submit = SubmitField('Добавить')
